@@ -2,37 +2,98 @@
   text-align: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+header {
+  text-align: center;
+  position: relative;
+  z-index: 1;
+  background-color: #282c34;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+header h1 {
+  font-size: 3rem;
+  background: linear-gradient(45deg, #ff006e, #8338ec, #3a86ff);
+  color: transparent;
+  animation: gradientAnimation 3s infinite;
+  text-shadow: 2px 2px #000000;
+  margin-top:3px;
+  margin-bottom:0px;
+  padding: 10px 20px;
+  border-radius: 15px;
+
 }
 
-.App-header {
+.Track {
+  display: flex;
+  align-items: center;
+  justify-content: space-between; /* Ensure items are spaced between */
+  padding: 10px;
+  border-bottom: 1px solid #ccc;
+  font-size: smaller;
+}
+
+.Track-information {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.Track-information h3 {
+  margin: 0;
+  font-size: 1rem;
+}
+
+.Track-information p {
+  margin: 0;
+  font-size: 0.9rem;
+}
+
+.Track-action {
+  margin-left: 10px; /* Adjust this value to increase/decrease spacing */
+  background-color: #007bff;
+  color: white;
+  border: none;
+  padding: 5px 10px;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 1rem;
+}
+
+.Track-action:hover {
+  background-color: #0056b3;
+}
+
+
+
+
+
+.frames {
   background-color: #282c34;
   min-height: 100vh;
   display: flex;
-  flex-direction: column;
   align-items: center;
   justify-content: center;
   font-size: calc(10px + 2vmin);
   color: white;
+  border: 1px solid azure;
+  position:relative;
+}
+
+.border-container {
+  display: flex;
+  width: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-color: #282c34;
+}
+
+.border-half {
+  flex: 1;
+  border: 2px solid azure;
 }
 
 .App-link {
   color: #61dafb;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
-}
+
