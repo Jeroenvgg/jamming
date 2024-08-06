@@ -1,6 +1,7 @@
 import React from 'react';
+import AudioPlayer from '../AudioPlayer';
 
-const Track = ({ track, onAdd, onRemove, isRemoval }) => {
+const Track = ({ track, onAdd, onRemove, isRemoval, showPreview }) => {
   const addTrack = () => onAdd(track);
   const removeTrack = () => onRemove(track);
 
@@ -15,6 +16,7 @@ const Track = ({ track, onAdd, onRemove, isRemoval }) => {
       ) : (
         <button className="Track-action" onClick={addTrack}>+</button>
       )}
+       { showPreview && <AudioPlayer previewUrl={track.preview_url} />}  
     </div>
   );
 };
